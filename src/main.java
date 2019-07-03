@@ -11,7 +11,7 @@ public class main {
 	
 	public void creater() {
 		try {
-			URL url = new URL("https://www.weather.gov/rah/");
+			URL url = new URL("https://forecast.weather.gov/product.php?site=CRH&product=SFT&issuedby=RAH");
 			
 			BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
 			String str;
@@ -19,16 +19,18 @@ public class main {
 				str = str.toString();
 				str.trim();
 				
-				if (str.contains("value=") && (str.length() < 25)) {
-					int spot = str.indexOf("=");
-					String temps = str.substring(spot);
-					temps = temps.substring(temps.indexOf(",")+2, spot+7);
-					temps = ("The current temperature is: " + temps + " degrees.");
+				if (str.contains("RALEIGH-DURHAM")) {
+					str = in.readLine();
+					str = in.readLine();
+					str = str.trim();
+					String temps = str.substring(1,3);
+					temps = ("Todays high is: " + temps + " degrees.");
 					System.out.println(temps);
 				}
 			}
 			
 			in.close();
+
 			
 		} catch (MalformedURLException e1) {
 		} catch (IOException e2) {}

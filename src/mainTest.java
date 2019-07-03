@@ -43,10 +43,10 @@ public class mainTest {
 			fail("str is empty");
 		}
 		
-		if (Integer.parseInt(test.substring(28, 30)) > 90) {
-			fail("It is too hot!!! Over 90 degrees with a temperature of: " + test);
+		if (Integer.parseInt(test.substring(16, 18)) > 90) {
+			fail("It will be too hot today with a high of: " + test.substring(16, 18));
 		} else {
-			System.out.println("It is a cool: " + test.substring(28, 30));
+			System.err.println("It is a cool: " + test.substring(28, 30));
 		}
 	}
 	
