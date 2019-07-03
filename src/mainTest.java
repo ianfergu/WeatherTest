@@ -26,7 +26,7 @@ public class mainTest {
 	@Test
 	public void testConstructor() {
 		try {
-			new main();
+			new highOf();
 		} catch (Exception e1) {
 			fail("The construction of the main class failed.");
 		}
@@ -34,7 +34,7 @@ public class mainTest {
 	
 	@Test
 	public void testTemp() {
-		new main().creater();
+		new highOf().creater();
 		String test = outContent.toString();
 		
 		try {
@@ -46,7 +46,7 @@ public class mainTest {
 		if (Integer.parseInt(test.substring(16, 18)) > 90) {
 			fail("It will be too hot today with a high of: " + test.substring(16, 18));
 		} else {
-			System.err.println("It is a cool: " + test.substring(28, 30));
+			System.out.println("It is a cool: " + test.substring(28, 30));
 		}
 	}
 	

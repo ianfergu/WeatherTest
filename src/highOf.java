@@ -4,9 +4,9 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class main {	
+public class highOf {	
 	
-	public static void main() {
+	public static void highOf() {
 	}
 	
 	public void creater() {
